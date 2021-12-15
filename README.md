@@ -9,11 +9,11 @@
 # How to use
 
 DialogueUI:
-   On your scene select an object and choose: AddComponent/DialogueUI.
-   Thus it makes the object a controller for a Dialogue, you may have various of these around your scene, one for each NPC is recommended.
+	On your scene select an object and choose: AddComponent/DialogueUI.
+	Thus it makes the object a controller for a Dialogue, you may have various of these around your scene, one for each NPC is recommended.
    
-   Various settings of these added components can be adjusted, but the system only requires to have
-   the DialogueUI component fiels filed. A prefab for a Dialogue Box is contained in /Prefabs/Text Box
+	Various settings of these added components can be adjusted, but the system only requires to have
+	the DialogueUI component fiels filed. A prefab for a Dialogue Box is contained in /Prefabs/Text Box
 
 DialogueObject:
    On your project assets folder create a new one for your dialogues.
