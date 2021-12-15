@@ -13,7 +13,7 @@ DialogueUI:
    Thus it makes the object a controller for a Dialogue, you may have various of these around your scene, one for each NPC is recommended.
    
    Various settings of these added components can be adjusted, but the system only requires to have
-   the DialogueUI component fiels filed.
+   the DialogueUI component fiels filed. A prefab for a Dialogue Box is contained in /Prefabs/Text Box
 
 DialogueObject:
    On your project assets folder create a new one for your dialogues.
@@ -29,7 +29,7 @@ DialogueObject:
     
    -DialogueString:
     -Dialoue Text: The text to be displayed with a typewriter effect, along with optional modifiers for each character 
-                    if desired (Read: Unity-ScriptableObjects-Dialogue-System/Demo/DialogueTags.txt)               
+                    if desired (Read: /Demo/DialogueTags.txt)               
     -Dialogue Portrait: A sprite to be displayed if added one 
     -Dialogue Speaker: The name of whom that phrase corresponds  
     -Dialogue Time: Used in case of being marked as Auto-Dialogue
