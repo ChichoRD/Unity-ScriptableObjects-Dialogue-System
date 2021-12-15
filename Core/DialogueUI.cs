@@ -47,7 +47,7 @@ public class DialogueUI : MonoBehaviour
 
     private Coroutine textEffectsRoutine = null;
     [SerializeField] private List<TextEvent> textEvents = null;
-    [SerializeField] private UnityEvent<bool> dialoguePlaying;
+    private UnityEvent<bool> dialoguePlaying;
 
     internal Dictionary<string, object> TextVariables { get; private set; } = new();
 
