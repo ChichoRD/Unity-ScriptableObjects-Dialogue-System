@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 725eaa26852dba044b74187eba8a67ca, type: 3}
+  m_Name: Demo Dialogue
+  m_EditorClassIdentifier: 
+  autoDialogue: 0
+  dialogue:
+  - portrait: {fileID: 0}
+    narrator: 
+    string: Hello Player
+    time: 0
+  - portrait: {fileID: 0}
+    narrator: 
+    string: I am the narrator, nice to meet you
+    time: 0
+  - portrait: {fileID: 0}
+    narrator: 
+    string: I got some <#0010f0><w, 8>nice</w></#> <s, 0.8><#ffff10>text</#> <#00f000>effects</#></s>!
+    time: 0
+  - portrait: {fileID: 0}
+    narrator: 
+    string: Your age is <w, 8>{age}</w>!
+    time: 0
+  responses: []
+  nextDialogue: {fileID: 0}

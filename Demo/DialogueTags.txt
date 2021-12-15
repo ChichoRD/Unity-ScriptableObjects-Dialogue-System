@@ -1,0 +1,16 @@
+Dialogue System Tags:
+
+*All numeric values support decimals with "," or "."
+
+
+<w, INTENSITY>Wavy text</w>							Recommended: INTENSITY (5, 15)*
+
+<s, INTENSITY>Shaky text</s>						Recommended: INTENSITY (0.1, 2f)*
+
+<#HEXCODE>Colored text</#>							Supports Hexadecimal: (6x rr gg bb) and (8x rr gg bb aa)
+
+<e, EVENTNAME>										Called when current phrase is parsed: Asign Calls in Inspector
+													through DialogueUI component
+
+{variable}											Substituted when parsed: Asign the variable with name between 
+													curly brackets by code, methods implemented in DIalogueUI component
