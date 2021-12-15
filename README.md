@@ -18,12 +18,12 @@ DialogueObject:
 	On your project assets folder create a new one for your dialogues.
 	You can now create new Dialogue right-clicking on your Dialogues folder through ScriptableObjects/DialogueObject. 
 	Select your newly created object and start adjusting its properties, it is included: 
-	- Auto Dialogue: Does not require the player to pass the dialogue  
-	- Next Dialogue: Dialogue Object to be readed after finishing the current one  
-	- Possible Responses: Responses to branch the player Dialogue
-  	- DialogueString:
-		- Dialoue Text: 	The text to be displayed with a typewriter effect, along with optional modifiers for each character 
+	* Auto Dialogue: Does not require the player to pass the dialogue  
+	* Next Dialogue: Dialogue Object to be readed after finishing the current one  
+	* Possible Responses: Responses to branch the player Dialogue
+  	* DialogueString:
+		* Dialoue Text: The text to be displayed with a typewriter effect, along with optional modifiers for each character 
                			if desired (Read: [this](/Demo/DialogueTags.txt))               
-		- Dialogue Portrait: A sprite to be displayed if added one 
-		- Dialogue Speaker: The name of whom that phrase corresponds  
-		- Dialogue Time: Used in case of being marked as Auto-Dialogue
+		* Dialogue Portrait: A sprite to be displayed if added one 
+		* Dialogue Speaker: The name of whom that phrase corresponds  
+		* Dialogue Time: Used in case of being marked as Auto-Dialogue
