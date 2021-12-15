@@ -21,18 +21,15 @@ DialogueObject:
    
    Select your newly created object and start adjusting its properties, it is included:
    
-    -Auto Dialogue: Does not require the player to pass the dialogue
+   -Auto Dialogue: Does not require the player to pass the dialogue
     
-    -Next Dialogue: Dialogue Object to be readed after finishing the current one
+   -Next Dialogue: Dialogue Object to be readed after finishing the current one
     
-    -Possible Responses: Responses to branch the player Dialogue
+   -Possible Responses: Responses to branch the player Dialogue
     
-    -DialogueString:
-     -Dialoue Text: The text to be displayed with a typewriter effect, along with optional modifiers for each character 
-                    if desired (Read: Unity-ScriptableObjects-Dialogue-System/Demo/DialogueTags.txt)
-                    
-     -Dialogue Portrait: A sprite to be displayed if added one
-     
-     -Dialogue Speaker: The name of whom that phrase corresponds
-     
-     -Dialogue Time: Used in case of being marked as Auto-Dialogue
+   -DialogueString:
+    -Dialoue Text: The text to be displayed with a typewriter effect, along with optional modifiers for each character 
+                    if desired (Read: Unity-ScriptableObjects-Dialogue-System/Demo/DialogueTags.txt)               
+    -Dialogue Portrait: A sprite to be displayed if added one 
+    -Dialogue Speaker: The name of whom that phrase corresponds  
+    -Dialogue Time: Used in case of being marked as Auto-Dialogue
