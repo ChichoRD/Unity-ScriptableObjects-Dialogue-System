@@ -78,14 +78,14 @@ public class DialogueUI : MonoBehaviour
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
 
-        interactAction.action.Enable();
+        interactAction?.action.Enable();
 
-        if (playOnEnable) PlayInitialDialogue();
+        if (playOnEnable) ShowInitialDialogue();
     }
 
     private void OnValidate() => ExtensionMethods.SpeedMeasurer(() => RegisterTextEvents(initialDialogue, new List<DialogueObject>()));
 
-    public void PlayInitialDialogue() => ShowDialogue(initialDialogue);
+    public void ShowInitialDialogue() => ShowDialogue(initialDialogue);
 
     public void ShowDialogue(DialogueObject dialogue)
     {
