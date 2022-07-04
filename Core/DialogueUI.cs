@@ -46,8 +46,10 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private InputActionReference interactAction;
 
     private Coroutine textEffectsRoutine = null;
+    private Coroutine dialogueRoutine = null;
     [SerializeField] private List<TextEvent> textEvents = null;
-    private UnityEvent<bool> dialoguePlaying;
+    [SerializeField] private UnityEvent OnDialogueStarted;
+    [SerializeField] private UnityEvent OnDialogueEnded;
 
     internal Dictionary<string, object> TextVariables { get; private set; } = new();
 
@@ -61,14 +63,6 @@ public class DialogueUI : MonoBehaviour
 
         value = TextVariables[name];
         return true;
-    }
-
-    internal bool IsDialoguePlaying
-    {
-        set
-        {
-            dialoguePlaying?.Invoke(value);
-        }
     }
 
     private bool HasEffects => textEffectsRoutine != null;
@@ -91,22 +85,22 @@ public class DialogueUI : MonoBehaviour
     {
         if (dialogue == null)
         {
-            ActiveDialogueBox(false, !dialogue.AutoDialogue);
+            ActiveDialogueBox(false);
             return;
         }
 
         if (HasEffects) StopCoroutine(textEffectsRoutine);
 
-        ActiveDialogueBox(true, !dialogue.AutoDialogue);
-        StartCoroutine(StepThroughDialogue(dialogue));
+        ActiveDialogueBox(true);
+        dialogueRoutine ??= StartCoroutine(StepThroughDialogue(dialogue));
     }
 
     private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
     {
         bool skipToNext = false;
-
         var waitUntilAction = new WaitUntil(() => interactAction.action.triggered);
-
+        OnDialogueStarted?.Invoke();
+        
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
             DialogueString currentDialogue = dialogueObject.Dialogue[i];
@@ -148,7 +142,7 @@ public class DialogueUI : MonoBehaviour
             yield break;
         }
 
-        ActiveDialogueBox(false, !dialogueObject.AutoDialogue);
+        ActiveDialogueBox(false);
 
         void AddExtraDialogueInfo(DialogueString currentDialogue)
         {
@@ -166,14 +160,14 @@ public class DialogueUI : MonoBehaviour
 
             narratorNameText.text = narr;
         }
+
+        dialogueRoutine = null;
+        OnDialogueEnded?.Invoke();
     }
 
 
-    private void ActiveDialogueBox(bool active, bool activationCallbacks)
+    private void ActiveDialogueBox(bool active)
     {
-        if (activationCallbacks)
-            IsDialoguePlaying = active;
-
         dialogueBox.SetActive(active);
 
         if (active) return;
