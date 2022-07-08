@@ -18,7 +18,7 @@ using UnityEngine;
 
 namespace ChichoExtensions
 {
-    public static partial class ExtensionMethods
+    internal static partial class ExtensionMethods
     {
         private static int HexToDec(string hex)
         {

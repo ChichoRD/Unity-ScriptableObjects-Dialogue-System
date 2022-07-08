@@ -53,7 +53,7 @@ public class DialogueUI : MonoBehaviour
 
     internal Dictionary<string, object> TextVariables { get; private set; } = new();
 
-    public void RegisterTextVariable<T>(string name, T value) => TextVariables.Add(name, value);
+    public void RegisterTextVariable<T>(string name, T value) => TextVariables.TryAdd(name, value);
 
     public bool TryGetVariableByName(string name, out object value)
     {
