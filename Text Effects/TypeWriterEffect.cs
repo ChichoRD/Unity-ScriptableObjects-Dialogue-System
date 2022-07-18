@@ -20,6 +20,7 @@ public class TypeWriterEffect : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
+        if (interactAction == null) return;
         interactAction.action.Enable();
     }
 
